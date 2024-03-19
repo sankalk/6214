@@ -8,14 +8,12 @@
 </head>
 
 <body>
-    <audio src="https://song.sgp1.digitaloceanspaces.com/song/478/10304.mp3"></audio>
+    <audio id="my_audio" src="https://song.sgp1.digitaloceanspaces.com/song/478/10304.mp3" loop="loop"></audio>
 </body>
 </html>
 
 <script>
-window.addEventListener("DOMContentLoaded", event => {
-  const audio = document.querySelector("audio");
-  audio.volume = 0.2;
-  audio.play();
-});
+    window.onload = function() {
+        document.getElementById("my_audio").play();
+    }
 </script>
