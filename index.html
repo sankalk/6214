@@ -9,21 +9,20 @@
 
 <body>
     <!-- The audio tag for the external audio file -->
-    <audio id="myAudio" src="./Ceylon.mp3" autoplay></audio>
+    <audio id="myAudio" src="./Ceylon.mp3"></audio>
 
     <script>
-         // Get the audio element
-        let myAudio = document.getElementById('myAudio');
+      // Get the audio element
+        const myAudio = document.getElementById('myAudio');
 
-        // Function to play the audio if it's paused
-        function playIfPaused() {
-            if (myAudio.paused) {
-                myAudio.play();
-            }
+        // Function to play audio and loop it
+        function playAndLoopAudio() {
+            myAudio.play(); // Play the audio
+            myAudio.loop = true; // Set the loop property to true for continuous looping
         }
 
-        // Call playIfPaused every second (or adjust as needed)
-        setInterval(playIfPaused, 1000);
+        // Call the function to play and loop the audio
+        playAndLoopAudio();
     </script>
 </body>
 
