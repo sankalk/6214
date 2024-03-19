@@ -9,20 +9,20 @@
 
 <body>
     <!-- The audio tag for the external audio file -->
-    <audio id="myAudio" src="./Ceylon.mp3"></audio>
+<!--     <audio id="myAudio" src="./Ceylon.mp3" autoplay></audio> -->
 
     <script>
-      // Get the audio element
-        const myAudio = document.getElementById('myAudio');
+      let myAudio = new Audio('./Ceylon.mp3'); // Create an Audio object with the file 'Ceylon.mp3'
 
-        // Function to play audio and loop it
-        function playAndLoopAudio() {
-            myAudio.play(); // Play the audio
-            myAudio.loop = true; // Set the loop property to true for continuous looping
+        window.onload = function() {
+            setInterval(GameLoop, 1000 / 10); // Start the game loop when the window is loaded
+        };
+
+        function GameLoop() {
+            if (myAudio.paused) { // Check if the audio is paused
+                myAudio.play(); // If paused, play the audio
+            }
         }
-
-        // Call the function to play and loop the audio
-        playAndLoopAudio();
     </script>
 </body>
 
