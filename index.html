@@ -8,17 +8,14 @@
 </head>
 
 <body>
-<audio id="myAudio" autoplay>
-  <source src="https://song.sgp1.digitaloceanspaces.com/song/478/10304.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
+    <audio src="https://song.sgp1.digitaloceanspaces.com/song/478/10304.mp3"></audio>
 </body>
-<bgsound src="https://song.sgp1.digitaloceanspaces.com/song/478/10304.mp3"></bgsound>
 </html>
 
 <script>
-function myFunction() {
-  var x = document.getElementById("myAudio").autoplay;
-  document.getElementById("demo").innerHTML = x;
-}
+window.addEventListener("DOMContentLoaded", event => {
+  const audio = document.querySelector("audio");
+  audio.volume = 0.2;
+  audio.play();
+});
 </script>
